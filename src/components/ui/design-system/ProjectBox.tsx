@@ -6,11 +6,10 @@ import { MdWeb } from "react-icons/md";
 
 interface Props {
   label?: string;
-  imgSrc?: string;
+  imgSrc?: any;
   description?: string;
   git?: string;
   demo?: string;
-  icon?: { icon: IconType };
 }
 
 const ProjectBox = ({
@@ -19,30 +18,27 @@ const ProjectBox = ({
   description,
   git = "code",
   demo = "demo",
-  icon,
 }: Props) => {
-  let descriptiontext: string =
-    "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt autem officiis expedita. Assumenda qui sapiente vel similique impedit voluptatem placeat harum soluta modi dignissimos doloribusbeatae dicta";
-
   return (
-    <div className="flex flex-col items-center w-[90%] md:max-w-[300px] mx-auto my-3 border border-gray-300  rounded-t-md">
-      <div className="rounded-md relative ">
+    <div className="flex flex-col items-center w-[90%] md:w-[300px] mx-auto my-3 border border-gray-300  rounded-t-md">
+      <div className="rounded-md relative w-[100%] h-[200px] ">
         <Image
-          src={"/assets/images/sitebg.png"}
+          src={imgSrc}
           alt="site web"
-          width={300}
-          height={300}
-          className="object-contain rounded-t-md relative"
+          fill
+          className="object-contain w-auto h-auto rounded-t-md relative"
+          sizes="(max-width: 768px)"
+          priority={false}
         />
       </div>
       <div className="flex flex-col px-4 py-3 bg-white">
         <div className="flex flex-col">
           <h5 className="text-[#003049] mt-2 font-bold ">{label}</h5>
           <p className="text-[13px] text-[#003049] mt-3 text-justify">
-            {descriptiontext}
+            {description}
           </p>
         </div>
-        <div>
+        <div className="">
           <p className="text-[12px] text-[#D62828] mt-2">{`voir le ${git} et la ${demo}`}</p>
           <div className="flex flex-row items-center justify-start gap-4">
             <AiFillGithub

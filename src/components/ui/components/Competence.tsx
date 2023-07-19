@@ -29,7 +29,7 @@ const Competence = (props: Props) => {
               </Button>
             </div>
           </div>
-          <div className="w-full md:w-2/5 flex flex-row flex-wrap gap-1 mt-5 pb-5">
+          <div className="w-full mx-auto md:w-2/5 flex flex-row flex-wrap gap-1 mt-5 pb-5">
             <Image
               src={"/assets/images/reactjs.png"}
               alt="javascript"

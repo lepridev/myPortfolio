@@ -12,7 +12,7 @@ const Navbar = () => {
 
   return (
     <Container>
-      <div className="fixed top-0 left-0 right-0 flex w-full items-center justify-between bg-[#F77F00] md:rounded-md md:border-black py-2 px-10 shadow-sm   md:bg-[#0e080834]  animate ">
+      <div className="fixed z-20 top-0 left-0 right-0 flex w-full items-center justify-between bg-[#F77F00] md:rounded-md md:border-black py-2 px-10 shadow-sm   md:bg-[#0e080834]  animate ">
         <div className=" w-[70px] h-10 md:w-[90px]  relative">
           <Image
             src={"/assets/images/logo.png"}
