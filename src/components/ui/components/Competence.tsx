@@ -2,13 +2,17 @@ import React from "react";
 import Button from "../design-system/Button";
 import Image from "next/image";
 import Container from "../design-system/Container";
+import { Link } from "react-scroll";
 
 type Props = {};
 
 const Competence = (props: Props) => {
   return (
     <Container>
-      <div className="w-full  md:h-[500px] flex flex-col items-center justify-center space-y-5 px-5 md:px-4 mx-auto">
+      <div
+        id="competence"
+        className="w-full  md:h-[500px] flex flex-col items-center justify-center space-y-5 px-5 md:px-4 mx-auto"
+      >
         <h3 className="text-[18px] md:text-[26px] text-[#EAE2B7] font-bold mb-4 md:mb-7">
           MES COMPETENCES
         </h3>
@@ -24,9 +28,18 @@ const Competence = (props: Props) => {
               </p>
             </div>
             <div className="mt-5">
-              <Button variant="primary" size="large">
-                Voir plus...
-              </Button>
+              <Link
+                activeClass="active"
+                to="realisation"
+                spy={true}
+                smooth={true}
+                offset={-80}
+                duration={500}
+              >
+                <Button variant="outline" size="small">
+                  Voir plus...
+                </Button>
+              </Link>
             </div>
           </div>
           <div className="w-full mx-auto md:w-2/5 flex flex-row flex-wrap gap-1 mt-5 pb-5">

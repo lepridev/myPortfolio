@@ -2,13 +2,17 @@ import React from "react";
 import Button from "../design-system/Button";
 import Container from "../design-system/Container";
 import Image from "next/image";
+import { Link } from "react-scroll";
 
 type Props = {};
 
 const Presentation = (props: Props) => {
   return (
     <Container>
-      <div className="w-full h-80 px-4 md:px-7 py-5 space-y-3 md:h-[500px] md:flex md:flex-row md:items-center md:justify-center">
+      <div
+        id="home"
+        className="w-full h-80 px-4 md:px-7 py-5 space-y-3 md:h-[500px] md:flex md:flex-row md:items-center md:justify-center"
+      >
         <div className="gap-7 h-full flex flex-col items-center justify-center md:h-full md:flex md:flex-col md:items-center md:justify-center md:gap-6">
           <div>
             <h2 className="text-[26px] text-center font-bold mb-6 text-[#EAE2B7] md:text-[36px] ">
@@ -21,12 +25,30 @@ const Presentation = (props: Props) => {
             </p>
           </div>
           <div className="flex flex-row items-center justify-center space-x-4 md:mt-70">
-            <Button variant="secondary" size="small">
-              En savoir...
-            </Button>
-            <Button variant="outline" size="small">
-              Mes Projets
-            </Button>
+            <Link
+              activeClass="active"
+              to="methode"
+              spy={true}
+              smooth={true}
+              offset={50}
+              duration={500}
+            >
+              <Button variant="secondary" size="small">
+                En savoir...
+              </Button>
+            </Link>
+            <Link
+              activeClass="active"
+              to="realisation"
+              spy={true}
+              smooth={true}
+              offset={-80}
+              duration={500}
+            >
+              <Button variant="outline" size="small">
+                Mes Projets
+              </Button>
+            </Link>
           </div>
         </div>
         <div className="hidden md:w-full md:flex md:flex-row md:items-center md:justify-center">

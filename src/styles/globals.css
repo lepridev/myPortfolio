@@ -19,6 +19,8 @@ animate {
 
 a:hover {
   @apply text-[#FCBF49];
+  @apply font-bold;
+  @apply cursor-pointer;
 }
 
 .animate,
