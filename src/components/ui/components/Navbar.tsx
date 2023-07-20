@@ -79,26 +79,38 @@ const Navbar = () => {
               </Link>
             </div>
             <div className="w-1/3 flex items-center justify-center space-x-3 text-white">
-              <AiFillGithub
-                size={24}
-                color="#fff"
-                className="cursor-pointer hover:scale-75"
-              />
-              <AiFillLinkedin
-                size={24}
-                color="#fff"
-                className="cursor-pointer hover:scale-75"
-              />
-              <MdOutlineWeb
-                size={24}
-                color="#fff"
-                className="cursor-pointer hover:scale-75"
-              />
-              <MdEmail
-                size={24}
-                color="#fff"
-                className="cursor-pointer hover:scale-75"
-              />
+              <a target="_blank" href="https://github.com/lepridev">
+                <AiFillGithub
+                  size={24}
+                  color="#fff"
+                  className="cursor-pointer hover:scale-75"
+                />
+              </a>
+
+              <a
+                target="_blank"
+                href="https://www.linkedin.com/in/lepri-armand-akpro-66b150271/"
+              >
+                <AiFillLinkedin
+                  size={24}
+                  color="#fff"
+                  className="cursor-pointer hover:scale-75"
+                />
+              </a>
+              <a target="_blank" href="https://portfolio-lepri.vercel.app/">
+                <MdOutlineWeb
+                  size={24}
+                  color="#fff"
+                  className="cursor-pointer hover:scale-75"
+                />
+              </a>
+              <a href="mailto:lepridev35@gmail.com">
+                <MdEmail
+                  size={24}
+                  color="#fff"
+                  className="cursor-pointer hover:scale-75"
+                />
+              </a>
             </div>
           </div>
           <div className="md:hidden flex items-center justify-end animate">
