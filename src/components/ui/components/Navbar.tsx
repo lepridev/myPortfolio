@@ -3,7 +3,6 @@
 import Image from "next/image";
 import { useState } from "react";
 import { Link } from "react-scroll";
-
 import Container from "../design-system/Container";
 import { AiOutlineMenu, AiFillGithub, AiFillLinkedin } from "react-icons/ai";
 import { MdEmail, MdOutlineWeb, MdClose } from "react-icons/md";
@@ -97,13 +96,7 @@ const Navbar = () => {
                   className="cursor-pointer hover:scale-75"
                 />
               </a>
-              <a target="_blank" href="https://portfolio-lepri.vercel.app/">
-                <MdOutlineWeb
-                  size={24}
-                  color="#fff"
-                  className="cursor-pointer hover:scale-75"
-                />
-              </a>
+
               <a href="mailto:lepridev35@gmail.com">
                 <MdEmail
                   size={24}
